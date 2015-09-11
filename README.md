@@ -1,7 +1,7 @@
 Tic Tac Toe by Nathan Chaney
 ===========
 
-This is a Terminal-based Tic-Tac-toe game. No GUI is implemented cureently.
+This is a Terminal-based Tic-Tac-toe game Example. No GUI has implemented thusfar.
 
 
 ***RobotFramework-Based Tests are not Fuctioning due to Virtual Machine 
