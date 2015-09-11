@@ -88,13 +88,13 @@ public class TicTacToe {
 		}
 		return false;
 	}
-	/*public mark resetBoard(){
+	public void resetBoard(){
 		for(int row = 0; row<3; row++){
 			for (int column = 0; column <3; column++){
 				board[row][column] = mark.EMPTY;
 				
 			}
 		}
-	
-	}	*/
+		
+	}	
 }
