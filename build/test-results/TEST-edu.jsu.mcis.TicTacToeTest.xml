@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="edu.jsu.mcis.TicTacToeTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2015-09-11T03:24:09" hostname="Nathan-PC" time="0.015">
+<testsuite name="edu.jsu.mcis.TicTacToeTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2015-09-11T03:39:14" hostname="Nathan-PC" time="0.015">
   <properties/>
   <testcase name="testGameIsOverByTieIfAllLocationsAreFilled" classname="edu.jsu.mcis.TicTacToeTest" time="0.015"/>
   <testcase name="testGameIsWonByXHorizontallyAcrossTopRow" classname="edu.jsu.mcis.TicTacToeTest" time="0.0"/>

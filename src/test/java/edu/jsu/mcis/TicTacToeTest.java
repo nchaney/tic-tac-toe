@@ -66,13 +66,13 @@ public class TicTacToeTest {
 		TicTacToe match = new TicTacToe();
 		match.setMark(0,0, TicTacToe.mark.XMARK);
 		match.setMark(0,1, TicTacToe.mark.XMARK);
-		match.setMark(1,2, TicTacToe.mark.OMARK);
-		match.setMark(2,0, TicTacToe.mark.OMARK);
-		match.setMark(2,2, TicTacToe.mark.OMARK);
+		match.setMark(1,2, TicTacToe.mark.XMARK);
+		match.setMark(2,0, TicTacToe.mark.XMARK);
+		match.setMark(2,2, TicTacToe.mark.XMARK);
 		match.setMark(0,2, TicTacToe.mark.OMARK);
-		match.setMark(1,0, TicTacToe.mark.XMARK);
-		match.setMark(1,1, TicTacToe.mark.XMARK);
-		match.setMark(2,1, TicTacToe.mark.XMARK);
-		assertFalse(match.checkForTie());
+		match.setMark(1,0, TicTacToe.mark.OMARK);
+		match.setMark(1,1, TicTacToe.mark.OMARK);
+		match.setMark(2,1, TicTacToe.mark.OMARK);
+		assertTrue(match.checkForTie());
 	}	
 }
