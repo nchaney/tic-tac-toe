@@ -1,6 +1,8 @@
-Tic Tac Toe
+Tic Tac Toe by Nathan Chaney
 ===========
 
-This project provides a terminal-based Tic Tac Toe game. The files here
-are simply placeholders with ideas of where you might start. In the
-end, your program must pass the acceptance tests in TicTacToeTests.txt.
+This is a Terminal-based Tic-Tac-toe game. No GUI is implemented cureently.
+
+
+***RobotFramework-Based Tests are not Fuctioning due to Virtual Machine 
+FileSystem not locating files when runacceptance.bat is enacted***
