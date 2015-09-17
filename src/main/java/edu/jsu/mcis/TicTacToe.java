@@ -2,12 +2,15 @@ package edu.jsu.mcis;
 
 public class TicTacToe {
 	
+	int xOrOCounter = 1;
 	mark[][] board = new mark[3][3];
 	
-	public static void main(String[] args) {
-		
-	}
 	public enum mark{XMARK, OMARK, EMPTY}
+	
+	public static void main(String[] args) {
+		TicTacToe match = new TicTacToe();
+	}
+	
 	
 	
 	public TicTacToe(){
@@ -20,8 +23,19 @@ public class TicTacToe {
 	}
 	
 
-	public void setMark(int row, int column, mark token){
-		board[row][column] = token;
+	public void setMark(int row, int column){
+		if(checkMark(row,column) != false){
+			if(xOrOCounter %2 == 0){
+				board[row][column]= mark.OMARK;
+				xOrOCounter = xOrOCounter + 1;
+			}
+			else{
+				board[row][column]= mark.XMARK;
+				xOrOCounter = xOrOCounter + 1;
+			}
+			
+		}
+		
 	}
 	
 	public mark getMark(int row, int column){
@@ -50,7 +64,7 @@ public class TicTacToe {
 		return true;
 	}
 	public mark checkForWin () {
-		//check to see if won horizontally
+		//match wins across horizontally
 		if (board[0][0] == board[0][1] && board[0][1] == board[0][2] && board[0][0] != mark.EMPTY) {
 			return board[0][0];
 		}
@@ -60,7 +74,7 @@ public class TicTacToe {
 		else if (board[2][0] == board[2][1] && board[2][1] == board[2][2] && board[2][0] != mark.EMPTY) {
 			return board[2][0];
 		}
-		//check to see if won vertically
+		//match wins down vertically
 		else if (board[0][0] == board[1][0] && board[1][0] == board[2][0] && board[0][0] != mark.EMPTY) {
 			return board[0][0];
 		}
@@ -70,14 +84,13 @@ public class TicTacToe {
 		else if (board[0][2] == board[1][2] && board[1][2] == board[2][2] && board[0][2] != mark.EMPTY) {
 			return board[0][2];
 		}
-		//check to see if won diagnally
+		//match wins diagnally
 		else if (board[0][0] == board[1][1] && board[1][1] == board[2][2] && board[0][0] != mark.EMPTY) {
 			return board[0][0];
 		}
 		else if (board[0][2] == board[1][1] && board[1][1] == board[2][0] && board[0][2] != mark.EMPTY) {
 			return board[0][2];
 		}
-		//return empty, game has not been won yet
 		else {
 			return mark.EMPTY;
 		}
@@ -88,13 +101,5 @@ public class TicTacToe {
 		}
 		return false;
 	}
-	public void resetBoard(){
-		for(int row = 0; row<3; row++){
-			for (int column = 0; column <3; column++){
-				board[row][column] = mark.EMPTY;
-				
-			}
-		}
 		
-	}	
 }
